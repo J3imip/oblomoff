@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <Navbar/>
-        <router-view/>
-      <Footer/>
+      <Navbar/> 
+      <router-view/>
+      <Footer/> 
     </div>
   </div>
 </template>
@@ -11,20 +11,18 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
-import Home from '@/pages/Home.vue';
 
 export default {
   name: "app",
   components: {
     Navbar,
-    Footer,
-    Home
+    Footer
   }
 }
 </script>
 
 
-<style>
+<style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
@@ -78,7 +76,7 @@ export default {
   }
 
   body {
-    background: #F2E6E1;
+    background: #FFF8E6;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -87,11 +85,39 @@ export default {
     min-height: 100%;
     overflow: hidden;
   }
-  ._container {
+  .__container {
     box-sizing: content-box;
     padding: 0px 40px;
     max-width: 1200px;
     margin: 0 auto; 
   }
+
+  body::-webkit-scrollbar,
+  div::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: #DFE0DF;
+  }
   
+  body::-webkit-scrollbar-thumb,
+  div::-webkit-scrollbar-thumb {
+    background-color: #FFBB85;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+  }
+  
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity .6s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  .fade-enter-to {
+    opacity: 1;
+  }
+
 </style>

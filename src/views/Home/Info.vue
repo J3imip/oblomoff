@@ -1,6 +1,6 @@
 <template>
   <div class="info">
-    <div class="_container">
+    <div class="__container">
       <div class="content">
         <h1>Общее</h1>
         <img src="@/assets/info.svg" alt="">
@@ -43,7 +43,7 @@ export default {
       h1 {
         padding-top: 48px;
         font-weight: 600;
-        font-size: 56px;
+        font-size: 48px;
         min-width: 100%;
         @media (max-width:1135px) {
             font-size: 46px;
@@ -66,10 +66,11 @@ export default {
       .text {
         max-width: 740px;
         text-align: end;
-        font-size: 36px;
+        font-size: 28px;
         font-weight: 400;
         line-height: 150%;
         color: #431800;
+        padding: 100px 0px;
         @media (max-width: 1135px) {
           font-size: 24px;
         }

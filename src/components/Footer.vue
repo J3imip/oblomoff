@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="_container">
+    <div class="__container">
       <div class="text">
         <div class="head">По всем вопросам можете обращаться <a href="#">сюда</a></div>
 

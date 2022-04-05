@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="_container">
+    <div class="__container">
       <div class="content">
         <div class="text">
           <h1>Лучшие рецепты в одном месте!</h1>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  ._container {
+  .__container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +61,7 @@ export default {
 
         h1 {
           font-weight: 600;
-          font-size: 56px;
+          font-size: 48px;
           line-height: 120%;
           @media (max-width:1135px) {
             font-size: 46px;
@@ -82,7 +82,7 @@ export default {
         span {
           color: #431800;
           margin-top: 20px;
-          font-size: 36px;
+          font-size: 28px;
           line-height: 150%;
           max-width: 580px;
           @media (max-width:1135px) {

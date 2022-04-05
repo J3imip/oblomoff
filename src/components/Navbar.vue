@@ -1,6 +1,6 @@
 <template>
   <header :class="{'scrolled-nav': scrolledNav}">
-    <nav class="_container">
+    <nav class="__container">
       <!-- Logo -->
       <div class="logo">
         Облом<span>off</span>
@@ -11,9 +11,9 @@
       <ul v-show="!mobile" class="navigation">
         <li><router-link onclick="" class="link" :to="{name: 'home'}">главная</router-link></li>
         <li><router-link onclick="" class="link" :to="{name: 'recepies'}">рецепты</router-link></li>
-        <li><router-link onclick="" class="link" :to="{name: 'recepies'}">контакты</router-link></li>
-        <li><router-link onclick="" class="link" :to="{name: 'recepies'}">блог</router-link></li>
-        <li><router-link onclick="" class="link" :to="{name: 'recepies'}">факт</router-link></li>
+        <li><router-link onclick="" class="link" :to="{name: 'contact'}">контакты</router-link></li>
+        <li><router-link onclick="" class="link" :to="{name: 'blog'}">блог</router-link></li>
+        <li><router-link onclick="" class="link" :to="{name: 'fact'}" >факт</router-link></li>
       </ul>
 
       <!-- Mobile bars icon -->
@@ -26,9 +26,9 @@
         <ul v-show="mobileNav" class="dropdown-nav">
           <li><router-link onclick="" class="link" :to="{name: 'home'}">главная</router-link></li>
           <li><router-link onclick="" class="link" :to="{name: 'recepies'}">рецепты</router-link></li>
-          <li><router-link onclick="" class="link" :to="{name: 'recepies'}">контакты</router-link></li>
-          <li><router-link onclick="" class="link" :to="{name: 'recepies'}">блог</router-link></li>
-          <li><router-link onclick="" class="link" :to="{name: 'recepies'}">факт</router-link></li>
+          <li><router-link onclick="" class="link" :to="{name: 'contact'}">контакты</router-link></li>
+          <li><router-link onclick="" class="link" :to="{name: 'blog'}">блог</router-link></li>
+          <li><router-link onclick="" class="link" :to="{name: 'fact'}">факт</router-link></li>
         </ul>
       </transition>
     </nav>
@@ -52,9 +52,13 @@ export default {
   mounted(){
     window.addEventListener('scroll', this.updateScroll);
   },
-  computed: {
-    currentRouteName() {
-        return this.$route.name;
+  watch:{
+    $route (){
+        if(this.$route.name != "home") {
+          this.scrolledNav = true;
+        } else {
+          this.scrolledNav = false;
+        }
     }
   },
   methods: {
@@ -62,6 +66,7 @@ export default {
       this.mobileNav = !this.mobileNav;
     }, 
     updateScroll(){
+      if(this.$route.name != "home") return;
       const scrollPosition = window.scrollY;
       if(scrollPosition > 50) {
         this.scrolledNav = true;
@@ -84,7 +89,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  ._container {
+  .__container {
     box-sizing: content-box;
     max-width: 1400px;
     margin: 0 auto; 
@@ -248,9 +253,5 @@ export default {
   .scrolled-nav {
     background-color: rgba(255, 193, 7, 1);
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-
-    nav {
-      padding: 8px 0;
-    }
   }
 </style>
