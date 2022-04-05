@@ -1,22 +1,14 @@
 <template>
   <div class="__container">
-    <div class="posts"> 
-      <div 
-        class="post"
-        v-for="(post,num) in posts" 
-        :key="num"
-      >
+    <div class="posts">
+      <div class="post" v-for="(post, num) in posts" :key="num">
         <div class="image">
           <img :src="'/src/assets/' + post.image" alt="" />
         </div>
         <div class="content">
-          <div class="title">{{post.title}}</div>
-          <a 
-            class="link" 
-            :href="post.link"
-          >{{post.link}}
-          </a>
-          <div class="date">{{post.date}}</div>
+          <div class="title">{{ post.title }}</div>
+          <a class="link" :href="post.link">{{ post.link }} </a>
+          <div class="date">{{ post.date }}</div>
         </div>
       </div>
     </div>
@@ -28,9 +20,9 @@ import posts from "@/storage/posts.json";
 
 export default {
   data() {
-    return{
-      posts
-    }
+    return {
+      posts,
+    };
   },
   name: "Blog",
 };
@@ -48,7 +40,7 @@ export default {
   padding-top: 20vh;
   flex-direction: column;
   max-width: 50%;
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     min-width: 100%;
   }
 
@@ -82,7 +74,7 @@ export default {
       text-transform: uppercase;
       font-size: 36px;
 
-      @media (max-width:1000px) {
+      @media (max-width: 1000px) {
         font-size: 6vw;
       }
     }
@@ -92,7 +84,7 @@ export default {
       font-size: 24px;
       margin-top: 20px;
       padding-bottom: 8vh;
-      @media (max-width:1000px) {
+      @media (max-width: 1000px) {
         font-size: 5vw;
       }
     }
@@ -104,7 +96,7 @@ export default {
       padding: 10px;
       font-size: 20px;
       font-weight: 300;
-      @media (max-width:1000px) {
+      @media (max-width: 1000px) {
         font-size: 4vw;
       }
     }

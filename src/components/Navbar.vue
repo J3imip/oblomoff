@@ -51,27 +51,47 @@
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
           <li>
-            <router-link onclick="" @click="toggleMobileNav" class="link" :to="{ name: 'home' }"
+            <router-link
+              onclick=""
+              @click="toggleMobileNav"
+              class="link"
+              :to="{ name: 'home' }"
               >главная</router-link
             >
           </li>
           <li>
-            <router-link onclick="" @click="toggleMobileNav" class="link" :to="{ name: 'recepies' }"
+            <router-link
+              onclick=""
+              @click="toggleMobileNav"
+              class="link"
+              :to="{ name: 'recepies' }"
               >рецепты</router-link
             >
           </li>
           <li>
-            <router-link onclick="" @click="toggleMobileNav" class="link" :to="{ name: 'contact' }"
+            <router-link
+              onclick=""
+              @click="toggleMobileNav"
+              class="link"
+              :to="{ name: 'contact' }"
               >контакты</router-link
             >
           </li>
           <li>
-            <router-link onclick="" @click="toggleMobileNav" class="link" :to="{ name: 'blog' }"
+            <router-link
+              onclick=""
+              @click="toggleMobileNav"
+              class="link"
+              :to="{ name: 'blog' }"
               >блог</router-link
             >
           </li>
           <li>
-            <router-link onclick="" @click="toggleMobileNav" class="link" :to="{ name: 'fact' }"
+            <router-link
+              onclick=""
+              @click="toggleMobileNav"
+              class="link"
+              :to="{ name: 'fact' }"
               >факт</router-link
             >
           </li>

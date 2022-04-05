@@ -3,7 +3,8 @@
     <div class="__container">
       <div class="text">
         <div class="head">
-          По всем вопросам можете обращаться <a href="#">сюда</a>
+          По всем вопросам можете обращаться
+          <router-link :to="{ name: 'contact' }">сюда</router-link>
         </div>
 
         <div class="contacts">
