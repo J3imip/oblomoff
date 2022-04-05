@@ -9,7 +9,12 @@
           <label for="firtName">ваше имя</label>
           <input type="name" name="firstName" id="" />
           <label for="comment">ваше обращение</label>
-          <textarea name="comment" class="comment" cols="30" rows="10"></textarea>
+          <textarea
+            name="comment"
+            class="comment"
+            cols="30"
+            rows="10"
+          ></textarea>
           <button>ОТправить</button>
         </form>
       </div>
@@ -36,7 +41,7 @@ export default {
   justify-content: space-between;
   padding: 150px 0px;
 
-  @media (max-width:1000px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     text-align: center;
     padding: 150px 0px 60px 0px;
@@ -45,21 +50,21 @@ export default {
   &__form,
   &__description {
     width: 42%;
-    @media (max-width:1240px) {
-      width: 48%;  
-    }  
-    @media (max-width:1000px) {
-      width: 80%;  
-    }  
-    @media (max-width:600px) {
-      width: 95%;  
-    }  
+    @media (max-width: 1240px) {
+      width: 48%;
+    }
+    @media (max-width: 1000px) {
+      width: 80%;
+    }
+    @media (max-width: 600px) {
+      width: 95%;
+    }
   }
 
   &__form {
-    @media (max-width:1240px) {
+    @media (max-width: 1240px) {
       text-align: left;
-    }  
+    }
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -75,7 +80,7 @@ export default {
       font-size: 18px;
       color: #454545;
       text-align: left;
-      @media (max-width:450px) {
+      @media (max-width: 450px) {
         font-size: 14px;
       }
     }
@@ -86,8 +91,8 @@ export default {
       margin: 0 auto;
       padding: 10px 0px;
 
-      @media (max-width:1000px) {
-        border: none; 
+      @media (max-width: 1000px) {
+        border: none;
       }
     }
 
@@ -112,7 +117,8 @@ export default {
         min-height: 34px;
         border: none;
         margin-bottom: 24px;
-        transition: .2s all ease;
+        transition: 0.2s all ease;
+        -webkit-appearance: none;
 
         &:hover {
           box-shadow: inset 0px 0px 8px 4px rgba(0, 0, 0, 0.4);
@@ -148,15 +154,15 @@ export default {
   &__description {
     font-size: 26px;
     line-height: 35px;
-    
-    @media(max-width:1000px) {
+
+    @media (max-width: 1000px) {
       padding-top: 40px;
     }
-    @media(max-width:850px) {
+    @media (max-width: 850px) {
       font-size: 24px;
       line-height: 25px;
     }
-    @media (max-width:450px) {
+    @media (max-width: 450px) {
       font-size: 16px;
       line-height: 20px;
     }
@@ -165,8 +171,8 @@ export default {
       font-weight: 600;
       margin-bottom: 24px;
 
-      @media (max-width:1000px) {
-        width: 100%; 
+      @media (max-width: 1000px) {
+        width: 100%;
       }
     }
   }
